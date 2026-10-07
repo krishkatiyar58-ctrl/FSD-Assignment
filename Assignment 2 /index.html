@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Library Management System</title>
+
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Library Management System</h1>
+
+        <!-- Add Book Form -->
+
+        <div class="form-box">
+
+            <h2>Add / Update Book</h2>
+
+            <input
+                type="text"
+                id="title"
+                placeholder="Enter Book Title"
+            >
+
+            <input
+                type="text"
+                id="author"
+                placeholder="Enter Author Name"
+            >
+
+            <input
+                type="number"
+                id="year"
+                placeholder="Enter Publication Year"
+            >
+
+            <button onclick="addBook()">Add Book</button>
+
+            <button onclick="updateBook()" id="updateBtn" style="display:none;">
+                Update Book
+            </button>
+
+            <button onclick="cancelUpdate()" id="cancelBtn" style="display:none;">
+                Cancel
+            </button>
+
+        </div>
+
+
+        <!-- Books Section -->
+
+        <div class="books-box">
+
+            <h2>Available Books</h2>
+
+            <button onclick="getBooks()" class="refresh">
+                Refresh Books
+            </button>
+
+            <div id="booksList"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
